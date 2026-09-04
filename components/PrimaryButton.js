@@ -1,15 +1,42 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, Pressable, StyleSheet } from "react-native";
 
 function PrimaryButton({ children }) {
+  function test() {
+    console.log("test");
+  }
   return (
-    <View>
-      <Text>{children}</Text>
+    <View style={styles.buttonOuterContainer}>
+      <Pressable
+        style={styles.BottonInnerContainer}
+        onPress={test}
+        android_ripple={{ color: "#650535" }}
+      >
+        <Text style={styles.buttonText}>{children}</Text>
+      </Pressable>
     </View>
   );
 }
 export default PrimaryButton;
 
-// const styles = StyleSheet.create({
+const styles = StyleSheet.create({
+  buttonOuterContainer: {
+    overflow: "hidden",
+    borderRadius: 28,
+    marginHorizontal: 4,
+  },
+  BottonInnerContainer: {
+    backgroundColor: "#72063c",
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    elevation: 2,
+  },
+
+  buttonText: {
+    color: "white",
+    textAlign: "center",
+  },
+});
+
 //   ButtonContainer: {
 //     justifyContent: "center",
 //     backgroundColor: "red",
@@ -21,4 +48,3 @@ export default PrimaryButton;
 //     borderWidth: 2,
 //     borderRadius: 15,
 //   },
-// });
