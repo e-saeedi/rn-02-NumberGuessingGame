@@ -5,7 +5,7 @@ import { useState } from "react";
 function StartGameScreen() {
   const [enteredNumber, setEnteredNumber] = useState("");
 
-  function numberInputHandler(enteredText) {
+  function numberHandler(enteredText) {
     setEnteredNumber(enteredText);
   }
 
@@ -19,7 +19,7 @@ function StartGameScreen() {
     if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
       Alert.alert(
         "Invalid number",
-        "Number has to be a number between 1 and 99.",
+        "Number has to be a number between 1 and 99. ",
         [
           {
             text: "Okay",
@@ -31,8 +31,9 @@ function StartGameScreen() {
       return;
     }
 
-    console.log("Valid number!");
+    console.log("valid number");
   }
+
   return (
     <View style={styles.inputContainer}>
       <TextInput
@@ -41,7 +42,7 @@ function StartGameScreen() {
         keyboardType="number-pad"
         autoCapitalize="none"
         autoCorrect={false}
-        onChangeText={numberInputHandler}
+        onChangeText={numberHandler}
         value={enteredNumber}
       />
 
