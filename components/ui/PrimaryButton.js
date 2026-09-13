@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     borderRadius: 28,
     marginHorizontal: 4,
+    margin: 6,
   },
   BottonInnerContainer: {
     backgroundColor: Colors.primary500,
