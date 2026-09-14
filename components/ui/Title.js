@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     color: Colors.accent500,
     borderWidth: 2,
     borderColor: Colors.accent500,
-    borderRadius: 5,
+    borderRadius: 3,
     textAlign: "center",
   },
 });
