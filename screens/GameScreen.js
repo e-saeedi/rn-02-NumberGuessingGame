@@ -55,7 +55,9 @@ function GameScreen({ userNumber, onGameOver }) {
     }
   }, [currentGuess, userNumber, onGameOver]);
 
-  console.log(currentGuess);
+  useEffect(() => {
+    ((minBoundary = 1), (maxBoundary = 100));
+  }, []);
 
   return (
     <View style={styles.screen}>
